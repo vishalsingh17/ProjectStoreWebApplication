@@ -1,0 +1,14 @@
+pandas
+pymongo
+fastapi
+sqlalchemy
+python-jose
+uvicorn
+python-multipart
+Jinja2
+bcrypt
+starlette
+PyYAML
+pymysql
+MySQL-python
+python-dotenv

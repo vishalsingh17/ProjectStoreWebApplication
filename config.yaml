@@ -1,0 +1,10 @@
+DATABASE:
+  DATABASE: projectstore
+  DB_NAME: mysql+pymysql
+  HOST: localhost
+  PASSWORD: hellodb123
+  PORT: 3306
+  USER: root
+FRONTEND_DIR:
+  STATIC_DIR: static
+  TEMPLATE_DIR: templates

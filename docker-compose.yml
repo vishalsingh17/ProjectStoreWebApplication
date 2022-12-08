@@ -1,0 +1,27 @@
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      # MYSQL_USER: admin
+      # MYSQL_PASSWORD: hellodb123
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - 3306:3306
+    expose:
+      - '3306'
+
+    volumes:
+      - D:\vol\mysql_data:/var/lib/mysql
+      - D:\vol\mysql_d:/var/run/mysqld
+
+  app:
+    build: .
+    command: python app.py
+    ports:
+     - 8080:8000
+    volumes:
+     - D:\vol\mysql_d:/var/run/mysqld   
+    depends_on:
+      - db
